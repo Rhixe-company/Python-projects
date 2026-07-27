@@ -3,7 +3,7 @@
 ## Project: Python-projects
 
 **Type:** Python scripts collection / learning automation
-**Tech Stack:** Python 3.x, requests, opencv-python, matplotlib, pillow, qrcode, beautifulsoup4, PyDictionary, schedule, ruff, mypy, uv
+**Tech Stack:** Python 3.x, requests, opencv-python, matplotlib, pillow, qrcode, beautifulsoup4, ruff, mypy, uv
 **Status:** Active
 
 ---
@@ -12,8 +12,8 @@
 
 | Project | URL | Why Relevant |
 |---------|-----|--------------|
-| Awesome Python Scripts | <https://github.com/mahmoud/awesome-python-scripts> | Curated utility script collection |
-| Python CLI Examples | <https://github.com/realpython/command-line-interfaces-python-argparse> | Argparse examples |
+| Amazing Python Scripts | <https://github.com/avinashkranjan/Amazing-Python-Scripts> | Curated 360+ utility script collection |
+| RealPython CLI Guide | <https://realpython.com/command-line-interfaces-python-argparse> | Argparse tutorial |
 
 ---
 
@@ -26,15 +26,17 @@
 - `uv run script.py` auto-creates ephemeral env, installs deps from annotation
 
 ### Python Version Guidance 2026
-- **Python 3.12** — Cleanup release; security-only (until Oct 2028); f-strings unleashed, comprehension inlining
-- **Python 3.13** — JIT compiler (experimental in 3.13, refined in 3.14); free-threaded Python (no-GIL) for CPU-bound tasks
-- **Python 3.14** (Apr 2026) — JIT stable; f-string debug `f"{x=}"` inline; tail-call recursion optimization
+- **Python 3.13** — JIT compiler (experimental, refined in 3.14); free-threaded Python (no-GIL)
+- **Python 3.14** (Apr 2026) — JIT stable; `asyncsched` module for async scheduling; f-string debug `f"{x=}"` inline
 - **Recommendation**: 3.13+ for new projects; 3.12 for stability-critical deployments
 
+### 2026 Python Tooling Stack
+- **uv** — Rust-based package/project manager from Astral (Ruff team); replaces pip + venv + pipx
+- **Ruff** — unified linter/formatter, supersedes flake8 + isort + pycodestyle
+- **Pylance** — dominant Python language server in VS Code
+
 ### Script Organization
-- 18 standalone scripts covering: calculators, face detection (OpenCV), QR generation, web scraping (BeautifulSoup), data viz (matplotlib), task scheduling
-- Ruff for linting, mypy optional for type checking
-- uv recommended for dependency management and ephemeral envs
+- 18 standalone scripts: calculators, face detection (OpenCV), QR generation, web scraping (BeautifulSoup), data viz (matplotlib), task scheduling
 
 ---
 
@@ -89,7 +91,7 @@
 ## Related Projects (in workspace)
 
 - **youtube-downloader** — shared Python CLI tooling patterns
-- **Django-Scrapy-Selenium** — shared BeautifulSoup + requests scraping
+- **Resume_maker** — shared document-generation patterns
 
 ---
 
@@ -97,12 +99,11 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| Python 3.13 Docs | <https://docs.python.org/3.13> | Language reference |
+| Python 3.14 Docs | <https://docs.python.org/3.14> | Language reference |
 | PEP 723 | <https://peps.python.org/pep-0723> | Inline script metadata |
 | uv | <https://docs.astral.sh/uv> | Fast package manager |
 
 ### Research Methodology
-- **Web search:** web_search (2026 Python patterns)
+- **Web search:** web_search (2026 Python patterns, uv, Ruff migration)
 - **Documentation:** web_extract (Python docs, PEP specs)
-- **Tool research:** uv, Ruff migration patterns
-- **Last verified:** 2026-07-16
+- **Last verified:** 2026-07-28

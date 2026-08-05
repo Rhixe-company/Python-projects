@@ -1,15 +1,22 @@
 def add(a, b):
     answer = a + b
-    print(str(a) + " + " + str( b) + " = " + str(answer) + "\n")
+    print(str(a) + " + " + str(b) + " = " + str(answer) + "\n")
+
+
 def sub(a, b):
     answer = a - b
-    print(str(a) + " - " + str(b ) + " = " + str(answer) + "\n")
+    print(str(a) + " - " + str(b) + " = " + str(answer) + "\n")
+
+
 def mul(a, b):
-    answer = a*b
+    answer = a * b
     print(str(a) + " * " + str(b) + " = " + str(answer) + "\n")
+
+
 def div(a, b):
     answer = a / b
     print(str(a) + " / " + str(b) + " = " + str(answer) + "\n")
+
 
 while True:
     print("A. Addition")
@@ -35,7 +42,7 @@ while True:
         b = int(input("input second number: "))
         mul(a, b)
     elif choice == "d" or choice == "D":
-        print("Division" )
+        print("Division")
         a = int(input("input first number:"))
         b = int(input("input second number: "))
         div(a, b)

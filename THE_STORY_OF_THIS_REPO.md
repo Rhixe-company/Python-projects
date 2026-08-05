@@ -6,7 +6,7 @@
 
 ## Prologue: The Learning Repository
 
-2023. A folder named `Python-projects`. No framework. No architecture. Just scripts.
+1. A folder named `Python-projects`. No framework. No architecture. Just scripts.
 
 Each file a tutorial completed. Each import a library learned.
 
@@ -78,12 +78,14 @@ July 2025. The workspace chronicler reviews 17 projects.
 | `Python-projects` | **Archive** |
 
 **Why archive?**
+
 - No active development in 12 months
 - Served its purpose (learning)
 - Clutters workspace inventory
 - `opencv-python` drags down dependency audits
 
 **How to archive:**
+
 1. Move to `archive/Python-projects/`
 2. Remove from `pr-ci.yml` matrix
 3. Keep `README.md` at root referencing it

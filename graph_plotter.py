@@ -6,10 +6,10 @@ y = [2, 3, 6]
 plt.plot(x, y)
 
 
-plt.xlabel('X Axis')
+plt.xlabel("X Axis")
 
-plt.ylabel( 'Y Axis')
+plt.ylabel("Y Axis")
 
-plt.title('Demo Graph ')
+plt.title("Demo Graph ")
 
 plt.show()

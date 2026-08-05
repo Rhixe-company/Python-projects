@@ -172,6 +172,7 @@ pre-commit run --all-files
 ## Quality Tools Configuration
 
 ### Ruff (`.ruff.toml` or `pyproject.toml`)
+
 ```toml
 [tool.ruff]
 target-version = "py311"
@@ -183,6 +184,7 @@ ignore = ["E501", "N818"]
 ```
 
 ### MyPy
+
 ```toml
 [tool.mypy]
 python_version = "3.11"
@@ -191,6 +193,7 @@ warn_unused_ignores = true
 ```
 
 ### Black
+
 ```toml
 [tool.black]
 line-length = 119

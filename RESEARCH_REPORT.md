@@ -20,22 +20,26 @@
 ## Key Findings
 
 ### PEP 723 Inline Script Metadata (2026 Standard)
+
 - `# /// script` block embeds dependencies directly in standalone scripts
 - Eliminates separate requirements.txt for single-file tools
 - Supported by uv, hatch, pipx — emerging 2026 standard for script packaging
 - `uv run script.py` auto-creates ephemeral env, installs deps from annotation
 
 ### Python Version Guidance 2026
+
 - **Python 3.13** — JIT compiler (experimental, refined in 3.14); free-threaded Python (no-GIL)
 - **Python 3.14** (Apr 2026) — JIT stable; `asyncsched` module for async scheduling; f-string debug `f"{x=}"` inline
 - **Recommendation**: 3.13+ for new projects; 3.12 for stability-critical deployments
 
 ### 2026 Python Tooling Stack
+
 - **uv** — Rust-based package/project manager from Astral (Ruff team); replaces pip + venv + pipx
 - **Ruff** — unified linter/formatter, supersedes flake8 + isort + pycodestyle
 - **Pylance** — dominant Python language server in VS Code
 
 ### Script Organization
+
 - 18 standalone scripts: calculators, face detection (OpenCV), QR generation, web scraping (BeautifulSoup), data viz (matplotlib), task scheduling
 
 ---
@@ -104,6 +108,7 @@
 | uv | <https://docs.astral.sh/uv> | Fast package manager |
 
 ### Research Methodology
+
 - **Web search:** web_search (2026 Python patterns, uv, Ruff migration)
 - **Documentation:** web_extract (Python docs, PEP specs)
 - **Last verified:** 2026-07-28

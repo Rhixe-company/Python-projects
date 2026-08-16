@@ -1,0 +1,7 @@
+# Python-projects — Bun configuration
+# 18 standalone Python scripts (Bun metadata only)
+
+[install]
+optional = true
+dev = true
+peer = true

@@ -52,8 +52,8 @@ def check_server(host: str, port: int) -> dict:
 import qrcode
 from qrcode.image.pil import PilImage
 
-def generate_qr(data: str, filename: str = "qrcode.png",
-                fill_color: str = "black", back_color: str = "white") -> str:
+
+def generate_qr(data: str, filename: str = "qrcode.png", fill_color: str = "black", back_color: str = "white") -> str:
     """Generate a QR code image from input data.
 
     Args:
@@ -76,9 +76,8 @@ def generate_qr(data: str, filename: str = "qrcode.png",
 ```python
 from PIL import Image
 
-def resize_image(input_path: str, output_path: str,
-                 width: int, height: int,
-                 maintain_aspect: bool = True) -> str:
+
+def resize_image(input_path: str, output_path: str, width: int, height: int, maintain_aspect: bool = True) -> str:
     """Resize an image file to specified dimensions.
 
     Args:
@@ -112,8 +111,7 @@ def convert_images_to_pdf(image_paths: list[str], output_path: str) -> str:
 
 ```python
 # Uses float arithmetic for currency conversion calculations
-def convert_currency(amount: float, from_currency: str,
-                     to_currency: str, rates: dict[str, float]) -> float:
+def convert_currency(amount: float, from_currency: str, to_currency: str, rates: dict[str, float]) -> float:
     """Convert an amount between currencies using provided exchange rates.
 
     Args:
@@ -137,8 +135,8 @@ def convert_currency(amount: float, from_currency: str,
 ```python
 import csv, json
 
-def csv_to_json(csv_path: str, json_path: str,
-                delimiter: str = ',', encoding: str = 'utf-8') -> None:
+
+def csv_to_json(csv_path: str, json_path: str, delimiter: str = ",", encoding: str = "utf-8") -> None:
     """Convert a CSV file to JSON format.
 
     Args:
@@ -158,8 +156,8 @@ def csv_to_json(csv_path: str, json_path: str,
 ```python
 import json
 
-def format_json(input_path: str, output_path: str | None = None,
-                indent: int = 2) -> str:
+
+def format_json(input_path: str, output_path: str | None = None, indent: int = 2) -> str:
     """Pretty-print a JSON file with configurable indentation."""
 ```
 
@@ -174,6 +172,7 @@ def format_json(input_path: str, output_path: str | None = None,
 ```python
 import os, shutil
 from pathlib import Path
+
 
 def organize_by_extension(directory: str, dry_run: bool = False) -> dict:
     """Organize files into subdirectories by file extension.
@@ -195,6 +194,7 @@ def organize_by_extension(directory: str, dry_run: bool = False) -> dict:
 
 ```python
 import hashlib
+
 
 def find_duplicates(directory: str, recursive: bool = True) -> list[list[str]]:
     """Find duplicate files in a directory using MD5 hashing.
@@ -219,6 +219,7 @@ def find_duplicates(directory: str, recursive: bool = True) -> list[list[str]]:
 from collections import Counter
 import re
 
+
 def analyze_text(text: str) -> dict:
     """Analyze text and return statistics.
 
@@ -236,8 +237,7 @@ def analyze_text(text: str) -> dict:
 #### markdown_to_html_converter.py
 
 ```python
-def md_to_html(md_path: str, html_path: str,
-               css_path: str | None = None) -> None:
+def md_to_html(md_path: str, html_path: str, css_path: str | None = None) -> None:
     """Convert a Markdown file to HTML."""
 ```
 
@@ -252,8 +252,8 @@ def md_to_html(md_path: str, html_path: str,
 ```python
 from bs4 import BeautifulSoup
 
-def scrape_page(url: str, selector: str,
-                attribute: str | None = None) -> list[str]:
+
+def scrape_page(url: str, selector: str, attribute: str | None = None) -> list[str]:
     """Scrape content from a web page using CSS selectors.
 
     Args:
@@ -277,10 +277,10 @@ def scrape_page(url: str, selector: str,
 import smtplib
 from email.message import EmailMessage
 
-def send_email(smtp_server: str, port: int,
-               sender: str, password: str,
-               recipient: str, subject: str,
-               body: str, html: bool = False) -> bool:
+
+def send_email(
+    smtp_server: str, port: int, sender: str, password: str, recipient: str, subject: str, body: str, html: bool = False
+) -> bool:
     """Send an email via SMTP.
 
     Returns:
@@ -298,11 +298,14 @@ def send_email(smtp_server: str, port: int,
 ```python
 import secrets, string
 
-def generate_password(length: int = 16,
-                      use_uppercase: bool = True,
-                      use_lowercase: bool = True,
-                      use_digits: bool = True,
-                      use_symbols: bool = True) -> str:
+
+def generate_password(
+    length: int = 16,
+    use_uppercase: bool = True,
+    use_lowercase: bool = True,
+    use_digits: bool = True,
+    use_symbols: bool = True,
+) -> str:
     """Generate a cryptographically secure random password.
 
     Args:
@@ -329,6 +332,7 @@ def generate_password(length: int = 16,
 ```python
 import os
 
+
 def analyze_disk_usage(path: str, top_n: int = 20) -> list[dict]:
     """Analyze disk usage for a given directory path.
 
@@ -347,6 +351,7 @@ def analyze_disk_usage(path: str, top_n: int = 20) -> list[dict]:
 
 ```python
 import platform, psutil
+
 
 def collect_system_info() -> dict:
     """Collect comprehensive system information.
@@ -368,9 +373,10 @@ def collect_system_info() -> dict:
 ```python
 import os, re
 
-def rename_files(directory: str, pattern: str,
-                 replacement: str, recursive: bool = False,
-                 dry_run: bool = True) -> list[tuple[str, str]]:
+
+def rename_files(
+    directory: str, pattern: str, replacement: str, recursive: bool = False, dry_run: bool = True
+) -> list[tuple[str, str]]:
     """Batch rename files using regex pattern matching.
 
     Args:
@@ -398,9 +404,8 @@ def rename_files(directory: str, pattern: str,
 ```python
 import yt_dlp
 
-def download_video(url: str, output_path: str = "downloads",
-                   quality: str = "best",
-                   audio_only: bool = False) -> dict:
+
+def download_video(url: str, output_path: str = "downloads", quality: str = "best", audio_only: bool = False) -> dict:
     """Download a video from YouTube or other supported platforms.
 
     Args:
@@ -435,6 +440,7 @@ Most scripts follow this pattern:
 import sys
 import argparse
 
+
 def main():
     """Parse arguments and execute the core function."""
     parser = argparse.ArgumentParser(description="...")
@@ -443,9 +449,11 @@ def main():
     result = core_function(args.input)
     print(result)
 
+
 def core_function(param: str) -> Any:
     """Core logic, designed to be importable by other scripts."""
     pass
+
 
 if __name__ == "__main__":
     main()

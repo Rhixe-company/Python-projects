@@ -20,6 +20,11 @@ em.set_content(body)
 
 context = ssl.create_default_context()
 
+if not email_sender or not email_password:
+    raise ValueError("EMAIL_SENDER/EMAIL_PASSWORD env vars required")
+if not email_receiver:
+    raise ValueError("EMAIL_RECEIVER env var required")
+
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
     smtp.login(email_sender, email_password)
     smtp.sendmail(email_sender, email_receiver, em.as_string())

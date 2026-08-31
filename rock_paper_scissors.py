@@ -64,5 +64,5 @@ while exit == False:  # noqa: E712
             print("computer input is scissors")
             print("its a tie")
 
-    elif user_input != " rock" or user_input != "paper" or user_input != "scissors":
+    elif user_input not in options:
         print("Invalid Input")
